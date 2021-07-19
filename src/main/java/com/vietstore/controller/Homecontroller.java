@@ -1,29 +1,51 @@
  package com.vietstore.controller;
 
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
+
+import com.vietstore.dao.ProductDAO;
+import com.vietstore.entity.Product;
+
+
 
 @Controller
 public class Homecontroller {
-	@RequestMapping("/home/index")
-	public String index() {
+	@Autowired
+	ProductDAO pdao;
+	
+	@RequestMapping(value = {"", "/home"})
+	public String index(Model model) {
+		List<Product> list2 = pdao.findBySpecial(4);
+		model.addAttribute("list", list2);
+		List<Product> list3 = pdao.findBySpecial(0);
+		model.addAttribute("list1", list3);
 		return "home/index";
 	}
-	@RequestMapping("/home/about")
+	@RequestMapping("/about")
 	public String about() {
 		return "home/about";
 	}
-	@RequestMapping("/home/contact")
+	@RequestMapping("/contact")
 	public String contact() {
 		return "home/contact";
 	}
-	@RequestMapping("/home/feedback")
+	@RequestMapping("/feedback")
 	public String feedback() {
 		return "home/feedback";
 	}
-	@RequestMapping("/home/fag")
-	public String fag() {
-		return "home/fag";
+	@RequestMapping("/faq")
+	public String faq() {
+		return "home/faq";
 	}
+	
+	@ResponseBody
+	@RequestMapping("/home/language")
+	public void language() {
 
+	}
 }

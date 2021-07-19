@@ -1,5 +1,5 @@
 <%@ page pageEncoding="utf8"%>
-<nav class="navbar navbar-inverse">
+<!--  <nav class="navbar navbar-inverse"> 
 	<div class="container-fluid">
 		<div class="navbar-header">
 			<a class="navbar-brand" href="/home/index">Home</a>
@@ -25,9 +25,9 @@
 		</ul>
 
 	</div>
-</nav>
+</nav>-->
 
-<%-- <style>
+ <style>
 .nav-item {
 	width: 130px;
 	text-align: center;
@@ -111,4 +111,4 @@
 		color: black;
 		font-weight: bold;
 	}
-</style> --%>
+</style> 

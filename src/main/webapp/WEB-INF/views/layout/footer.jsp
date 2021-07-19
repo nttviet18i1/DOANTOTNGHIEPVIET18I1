@@ -60,7 +60,7 @@
                 <p><a href="#" style="text-decoration: none; color: black;">Chính sách trả góp</a></p>
               </div>
               <div class="col-smx-3" style="width: 260px;">
-                <h5>Thông tin HappyShop</h5>
+                <h5>Thông tin Vietstore</h5>
                 <p>Giới thiệu</p>
                 <p>Thông tin liên hệ</p>
                 <p>Hệ thống cửa hàng</p>

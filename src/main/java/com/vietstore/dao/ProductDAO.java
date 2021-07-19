@@ -20,5 +20,9 @@ public interface ProductDAO {
 
 	List<Product> findByKeywords(String keywords);
 	
+	List<Product> findByIds(String ids);
+
+	List<Product> findBySpecial(Integer id);
+	
 
 }
