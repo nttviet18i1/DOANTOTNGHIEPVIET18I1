@@ -1,5 +1,5 @@
 <%@ page pageEncoding="utf8"%>
-<!--  <nav class="navbar navbar-inverse"> 
+  <nav class="navbar navbar-inverse"> 
 	<div class="container-fluid">
 		<div class="navbar-header">
 			<a class="navbar-brand" href="/home/index">Home</a>
@@ -12,11 +12,11 @@
 			<li class="dropdown"><a class="dropdown-toggle"
 				data-toggle="dropdown" href="#">Account <span class="caret"></span></a>
 				<ul class="dropdown-menu">
-					<li><a href="#">Đăng nhập</a></li>
+					<li><a href="/account/login">Đăng nhập</a></li>
 					<li><a href="#">Đăng ký</a></li>
 					<li><a href="#">Quên mật khẩu</a></li>
 					<li><a href="#">Đăng Xuất</a></li>
-					<li><a href="#">Đổi mật khẩu</a></li>
+					<li><a href="/account/logout">Đổi mật khẩu</a></li>
 				</ul></li>
 		</ul>
 		<ul class="nav navbar-nav navbar-right">
@@ -25,9 +25,9 @@
 		</ul>
 
 	</div>
-</nav>-->
+</nav>
 
- <style>
+ <%-- <style>
 .nav-item {
 	width: 130px;
 	text-align: center;
@@ -111,4 +111,4 @@
 		color: black;
 		font-weight: bold;
 	}
-</style> 
+</style>  --%>

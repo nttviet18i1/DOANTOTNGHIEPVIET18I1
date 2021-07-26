@@ -18,7 +18,7 @@ public class Homecontroller {
 	@Autowired
 	ProductDAO pdao;
 	
-	@RequestMapping(value={"","/index"})
+	@RequestMapping(value={"","home/index"})
 	public String index() {
 		return "home/index";
 	}

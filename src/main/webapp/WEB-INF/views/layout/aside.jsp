@@ -10,13 +10,13 @@
 <div class="panel panel-default">
 	<div class="panel-heading">ShoppingCart</div>
 	<div class="panel-body">
-		<img src="/static/images/shopping_cart.gif" class="col-sm-5">
+		<img id =cart-img src="/static/images/shopping_cart.gif" class="col-sm-5">
 		<ul class="col-sm-7">
 			<li><b id="cart-cnt">${cart.count}</b>mặt hàng</li>
 			<li><b id ="cart-amt">
 			<f:formatNumber value="${cart.amount }" pattern="#,##.00" />
 					</b>VNĐ</li>
-			<li><a href="">Xem giỏ hàng</a></li>
+			<li><a href="/cart/view">Xem giỏ hàng</a></li>
 		</ul>
 
 	</div>
@@ -49,5 +49,7 @@
 	
 	</div>
 </div>
+<style id =cart-css>
 
+</style>
 
