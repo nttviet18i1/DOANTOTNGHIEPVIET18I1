@@ -1,7 +1,7 @@
 <%@ page pageEncoding="utf-8"%>
 <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
 <%@ taglib uri="http://www.springframework.org/tags" prefix="s"%>
-
+<%-- 
 <div class="container" style="margin-bottom: 25px">
 	<br>
 
@@ -61,14 +61,14 @@
 			</a>
 		</li>
 
-		</div>
+		</div> --%>
 
 		<div class="col-sm-8">
 			<div class="ct1">
 				<div>
 					<h4 style="font-weight: 600">Thông tin cá nhân</h4>
 					<hr>
-					<form:form action="/account/edit" modelAttribute="form" enctype="multipart/form-data">
+					<form action="/account/edit" modelAttribute="form" enctype="multipart/form-data">
 					<h4 class="label label-success">${message}</h4>
 						<br>
 						<div class="row">
@@ -90,7 +90,7 @@
 							</div>
 							<div class="col-sm-8">
 								<p>
-									<form:input style="width: 90%;" path="id" class="form-control" readonly="true" />
+									<input style="width: 90%;" path="id" class="form-control"  />
 								</p>
 							</div>
 						</div>
@@ -100,7 +100,7 @@
 							</div>
 							<div class="col-sm-8">
 								<p>
-									<form:input style="width: 90%;" path="fullname" class="form-control" required="required" pattern=".{6,}" title="Họ tên phải từ 6 ký tự trở lên"/>
+									<input style="width: 90%;" path="fullname" class="form-control" />
 								</p>
 							</div>
 						</div>
@@ -110,7 +110,7 @@
 							</div>
 							<div class="col-sm-8">
 								<p>
-									<form:input style="width: 90%;" path="telephone" class="form-control" required="required" pattern=".{10,}" title="Số điện thoại gồm 10 số "/>
+									<input style="width: 90%;" path="telephone" class="form-control" />
 								</p>
 							</div>
 						</div>
@@ -120,26 +120,24 @@
 							</div>
 							<div class="col-sm-8">
 								<p>
-									<form:input style="width: 90%;" path="email" class="form-control" required="required" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="Email không hợp lệ"/>
+									<input style="width: 90%;" path="email" class="form-control" <%--required="required"  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="Email không hợp lệ" --%>/>
 								</p>
 							</div>
 						</div>
 						<div class="row">
 							<div class="col-sm-4"></div>
 							<div class="col-sm-8">
-								<form:hidden path="password" />
+							<%-- 	<form:hidden path="password" />
 								<form:hidden path="activated" />
-								<form:hidden path="admin" />
+								<form:hidden path="admin" /> --%>
 								<button class="btn btn-success" style="width: 90%;">Cập nhật</button>
 							</div>
 						</div>
-					</form:form>
+			</form>
 				</div>
 			</div>
 		</div>
-	</div>
-</div>
-
+	
 <style>
 .dang-nhap {
 	background-color: white;
@@ -148,19 +146,5 @@
 	width: 60%;
 }
 
-.quan-li-thong-tin .active {
-	background-color: white;
-	width: 110%;
-	padding: 10px 5px 0px;
-	border-radius: 5px;
-}
-
-.gach {
-	background-color: blue;
-	width: 100px;
-}
-
-.quan-li-thong-tin .active span {
-	color: black;
-}
+.
 </style>
