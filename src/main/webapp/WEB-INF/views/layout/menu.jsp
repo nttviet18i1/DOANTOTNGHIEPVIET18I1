@@ -1,5 +1,9 @@
-<%@ page pageEncoding="utf8"%>
-  <nav class="navbar navbar-inverse"> 
+<%@ page pageEncoding="utf-8"%>
+<%@ taglib uri="http://java.sun.com/jstl/core_rt" prefix="c"%>
+<%@ taglib uri="http://www.springframework.org/tags" prefix="s"%>
+
+
+<!--   <nav class="navbar navbar-inverse"> 
 	<div class="container-fluid">
 		<div class="navbar-header">
 			<a class="navbar-brand" href="/home/index">Home</a>
@@ -26,8 +30,8 @@
 
 	</div>
 </nav>
-
- <%-- <style>
+ -->
+ <style>
 .nav-item {
 	width: 130px;
 	text-align: center;
@@ -94,7 +98,7 @@
 				<div class="list_danh_muc" style="position: absolute;z-index:1;display: none;width: 350px;padding-left: 70px;margin-top: -20px">
 
 						<c:forEach var="c" items="${cates}">
-							<a  class="list-group-item" href="/product/list-by-categorys/${c.id}">
+							<a  class="list-group-item" href="/product/list-by-category/${c.id}">
 								<img src="/static/images/icon/4.png" /> ${c.nameVN}
 							</a>
 						</c:forEach>
@@ -111,4 +115,6 @@
 		color: black;
 		font-weight: bold;
 	}
-</style>  --%>
+</style>
+
+
