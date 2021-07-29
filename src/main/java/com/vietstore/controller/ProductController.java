@@ -118,4 +118,17 @@ public class ProductController {
 				return "false";
 			}
 	}
+	@RequestMapping("/product/favo")
+	public String favo(Model model) {
+
+		// Hàng yêu thích
+				Cookie favo = cookie.read("favo");
+				if (favo != null) {
+					String ids = favo.getValue();
+					List<Product> favo_list = pdao.findByIds(ids);
+					model.addAttribute("favo", favo_list);
+				}
+		return "product/favo";
+	}
 }
+

@@ -1,51 +1,52 @@
-<%@ page  pageEncoding="utf-8"%>
-<%@ taglib uri="http://tiles.apache.org/tags-tiles" prefix="titles" %>
+<%@ page pageEncoding="utf-8"%>
+
+<%@ taglib uri="http://tiles.apache.org/tags-tiles" prefix="tiles"%>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Vietstore</title>
- <titles:insertAttribute name="head"></titles:insertAttribute>
+<title>VietStore - Điện thoại di động giá rẻ - uy tín - chất lượng</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="">
+<meta name="author" content="">
+<tiles:insertAttribute name="head" />
+<!-- DataTables CSS -->
+<link href="/static/bower_components/datatables-plugins/integration/bootstrap/3/dataTables.bootstrap.css" rel="stylesheet">
 
- 
- 
-  
+<!-- DataTables Responsive CSS -->
+<link href="/static/bower_components/datatables-responsive/css/dataTables.responsive.css" rel="stylesheet">
+
+
 </head>
+
+<script>
+        $(document).ready(function() {
+            $('#dataTables-example').DataTable({
+                responsive: true
+            });
+        });
+</script>
+
 <body>
 
-<div class="container">
-  <header class="row">
- 		<h1>VietStore</h1> 
-  </header>
-  
-  <nav class="row">
-  
-   <titles:insertAttribute name="menu"></titles:insertAttribute>
-  
-  
-  </nav>
-  
-  <div class="row">
-  
-  <article class="col-sm-9">
-    <titles:insertAttribute name="body"></titles:insertAttribute>
-  	
-  </article>
-  <aside class="col-sm-3">
-  
-   <titles:insertAttribute name="aside"></titles:insertAttribute>
 
-  </aside>
-  
-  </div>
-  <footer class="row">
-   <titles:insertAttribute name="footer"></titles:insertAttribute>
-  
-  	 
-  </footer>
- 
-  
-  
+
+	<tiles:insertAttribute name="header" />
+
+
+	<tiles:insertAttribute name="menu" />
+
+<div class="container-fluid" style="margin-top: -15px; padding: 0px 80px 0px 80px">
+		<tiles:insertAttribute name="body" />
 </div>
+	<div class="row">
+		<tiles:insertAttribute name="aside" />
+	</div>
+
+
+	<tiles:insertAttribute name="footer" />
+
 
 </body>
 </html>

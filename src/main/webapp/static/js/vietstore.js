@@ -53,7 +53,7 @@ $(document).ready(function(){
 				location.reload();
 		
 	});
-	
+	//add cart
 	$(".btn-add-to-cart").click(function(){
 		
 		var id = $(this).closest("div").attr("data-id");
@@ -74,6 +74,21 @@ $(document).ready(function(){
 		/*alert(img.attr("src"));*/
 		
 	});
+	
+	//add Shopping cart details
+	$(".btn-add-to-carts").on("click", function() {
+		var id = $(this).closest("div").attr("data-id");
+
+		$.ajax({
+			url:"/cart/add/"+id,
+			success: function(response){
+				$(".cart-cnt").html(response[0]);
+				$(".cart-amt").html(response[1]);
+				
+				
+			}
+		});
+		});
 	
 	
 	//email dialong
@@ -121,3 +136,5 @@ $(document).ready(function(){
 			});
 		});
 	});	
+	
+	
