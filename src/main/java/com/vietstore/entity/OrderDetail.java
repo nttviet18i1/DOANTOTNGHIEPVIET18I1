@@ -1,5 +1,4 @@
 package com.vietstore.entity;
-
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -8,16 +7,15 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
-
-
-@Entity @Table(name="OrderDetails")
+@Entity
+@Table(name = "OrderDetails")
 public class OrderDetail {
 	@Id 
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	Integer id;
 	//Integer orderId;
 	//Integer productId;
-	Double unitPrice;
+	Long unitPrice;
 	Integer quantity;
 	Double discount;
 	
@@ -29,20 +27,6 @@ public class OrderDetail {
 	@JoinColumn(name="productId")
 	Product product;
 
-	
-	public OrderDetail() {}
-		
-
-	public OrderDetail(Integer id, Double unitPrice, Integer quantity, Double discount, Order order, Product product) {
-		super();
-		this.id = id;
-		this.unitPrice = unitPrice;
-		this.quantity = quantity;
-		this.discount = discount;
-		this.order = order;
-		this.product = product;
-	}
-
 	public Integer getId() {
 		return id;
 	}
@@ -51,11 +35,11 @@ public class OrderDetail {
 		this.id = id;
 	}
 
-	public Double getUnitPrice() {
+	public Long getUnitPrice() {
 		return unitPrice;
 	}
 
-	public void setUnitPrice(Double unitPrice) {
+	public void setUnitPrice(Long unitPrice) {
 		this.unitPrice = unitPrice;
 	}
 
@@ -90,7 +74,6 @@ public class OrderDetail {
 	public void setProduct(Product product) {
 		this.product = product;
 	}
-	
 	
 	
 }

@@ -9,6 +9,8 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
+
+import com.vietstore.entity.Order;
 import com.vietstore.entity.OrderDetail;
 @Transactional
 @Repository
@@ -52,6 +54,16 @@ public class OrderDetailDAOImpl implements OrderDetailDAO {
 		OrderDetail entity = session.find(OrderDetail.class,id);
 		session.delete(entity);
 		return entity;
+	}
+
+	@Override
+	public List<OrderDetail> findByOrder(Order order) {
+		String hql="FROM OrderDetail d WHERE d.order.id=:oid";
+		Session session=factory.getCurrentSession();
+		TypedQuery<OrderDetail> query=session.createQuery(hql,OrderDetail.class);
+		query.setParameter("oid", order.getId());
+		List<OrderDetail> list=query.getResultList();
+		return list;
 	}
 	
 	

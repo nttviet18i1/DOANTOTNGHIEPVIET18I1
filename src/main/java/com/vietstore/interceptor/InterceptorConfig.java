@@ -7,15 +7,32 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 
 
+
+
+
+
 @Configuration
 public class InterceptorConfig  implements WebMvcConfigurer{
 	@Autowired
-   Sharelnterceptor share;
+  
+	Sharelnterceptor share;
+
+	@Autowired
+	Authorizelnterceptor auth;
+
 	@Override
 	public void addInterceptors(InterceptorRegistry registry) {
 		registry.addInterceptor(share).addPathPatterns("/**");
 
-		
+		registry.addInterceptor(auth).addPathPatterns(
+				"/account/change", 
+				"/order/checkout", 
+				"/account/logout",
+				"/account/edit", 
+				"/order/list",
+				"/order/items",
+				"/order/detail",
+				"/account/order/**");
 	}
 
 

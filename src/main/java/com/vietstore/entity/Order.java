@@ -20,7 +20,8 @@ import org.springframework.format.annotation.DateTimeFormat;
 
 
 
-@Entity @Table(name="Orders")
+@Entity
+@Table(name = "Orders")
 public class Order {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -39,34 +40,25 @@ public class Order {
 	@JoinColumn(name="userId")
 	User user;
 	
+	
 	@OneToMany(mappedBy = "order")
 	List<OrderDetail> orderDetails;
 
-	public Order(Integer id, Date orderDate, String telephone, String address, Double amount, String description,
-			Integer status, User user, List<OrderDetail> orderDetails) {
-		super();
-		this.id = id;
-		this.orderDate = orderDate;
-		this.telephone = telephone;
-		this.address = address;
-		this.amount = amount;
-		this.description = description;
-		this.status = status;
-		this.user = user;
-		this.orderDetails = orderDetails;
-	}
 
 	public Integer getId() {
 		return id;
 	}
 
+
 	public void setId(Integer id) {
 		this.id = id;
 	}
 
+
 	public Date getOrderDate() {
 		return orderDate;
 	}
+
 
 	public void setOrderDate(Date orderDate) {
 		this.orderDate = orderDate;
@@ -76,6 +68,7 @@ public class Order {
 		return telephone;
 	}
 
+
 	public void setTelephone(String telephone) {
 		this.telephone = telephone;
 	}
@@ -84,49 +77,60 @@ public class Order {
 		return address;
 	}
 
+
 	public void setAddress(String address) {
 		this.address = address;
 	}
+
 
 	public Double getAmount() {
 		return amount;
 	}
 
+
 	public void setAmount(Double amount) {
 		this.amount = amount;
 	}
+
 
 	public String getDescription() {
 		return description;
 	}
 
+
 	public void setDescription(String description) {
 		this.description = description;
 	}
-
+	
 	public Integer getStatus() {
 		return status;
 	}
+
 
 	public void setStatus(Integer status) {
 		this.status = status;
 	}
 
+
 	public User getUser() {
 		return user;
 	}
+
 
 	public void setUser(User user) {
 		this.user = user;
 	}
 
+
 	public List<OrderDetail> getOrderDetails() {
 		return orderDetails;
 	}
 
+
 	public void setOrderDetails(List<OrderDetail> orderDetails) {
 		this.orderDetails = orderDetails;
 	}
+
 	
 	
 }

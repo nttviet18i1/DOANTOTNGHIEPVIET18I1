@@ -2,6 +2,7 @@ package com.vietstore.dao;
 
 import java.util.List;
 
+import com.vietstore.entity.Order;
 import com.vietstore.entity.OrderDetail;
 
 
@@ -15,6 +16,8 @@ public interface OrderDetailDAO {
 	void update(OrderDetail entity);
 
 	OrderDetail delete(Integer id);
+
+	List<OrderDetail> findByOrder(Order order);
 	
 
 }

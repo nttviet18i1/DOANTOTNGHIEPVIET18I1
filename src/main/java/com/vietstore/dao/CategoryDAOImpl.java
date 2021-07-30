@@ -1,5 +1,7 @@
 package com.vietstore.dao;
 
+
+
 import java.util.List;
 
 import javax.persistence.TypedQuery;
