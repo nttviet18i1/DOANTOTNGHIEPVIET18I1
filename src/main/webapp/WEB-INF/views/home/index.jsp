@@ -1,39 +1,14 @@
 <%@ page pageEncoding="utf-8"%>
 <%@ taglib uri="http://java.sun.com/jstl/core_rt" prefix="c"%>
+<%@ taglib uri="http://java.sun.com/jstl/fmt_rt" prefix="f"%>
+<%@ taglib uri="http://www.springframework.org/tags" prefix="s"%>
 
 <c:set var="cart" value="${sessionScope['scopedTarget.cartService']}" />
 
- <c:forEach var="p" items="${list}">
-
-	<div class="col-sm-4">
-		<div class="thumbnail">
-			<a href="product/detail/${p.id }"> <img class="vietstore-product"
-				src="/static/images/products/${p.image}"></a>
-				
-		<div data-id="${p.id}" class="pull-center text-center">
-						<button class="btn btn-sm btn-danger btn-add-to-cart">
-							<i class="glyphicon glyphicon-shopping-cart"></i>
-						</button>
-						<button class="btn btn-sm btn-warning btn-star">
-							<i class="glyphicon glyphicon-star"></i>
-						</button>
-						<button class="btn btn-sm btn-success btn-open-dialog"
-							data-toggle="modal" data-target="#myModal">
-							<i class="glyphicon glyphicon-envelope"></i>
-						</button>
-					</div>
-				</div>
-	</div>
-
-
-</c:forEach>
 
 
 
 
-
-
-<%-- 
 		<div style="padding: 10px 0px 15px; margin-top: -10px; position: relative;margin-left: 300px">
 
 
@@ -49,7 +24,7 @@
               
 				<div class="carousel-inner">
 					<div class="carousel-item active">
-						<img src="/static/images/slideshow/slide1.jpg" alt="Los Angeles" width="100%" height="342px">
+						<img src="/static/images/slideshow/banner3.png"alt="Los Angeles" width="100%" height="342px">
 					</div>
 					<div class="carousel-item">
 						<img src="/static/images/slideshow/slide2.jpg" alt="Los Angeles" width="100%" height="342px">
@@ -305,4 +280,3 @@ html, body, .container, .main {
 	}
 }
 </style>
- --%>

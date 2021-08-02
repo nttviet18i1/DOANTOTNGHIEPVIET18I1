@@ -104,7 +104,7 @@ public class AccountController {
 			if (backUrl != null) {
 				return "redirect:" + backUrl;
 			}
-			return "redirect:/home/index";
+			return "redirect:/home";
 		}
 		return "account/login";
 	}

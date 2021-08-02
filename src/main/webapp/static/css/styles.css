@@ -1,4 +1,4 @@
-/* .estore-prod {
+.estore-prod {
 	height: 220px !important;
 	max-height: 100%
 }
@@ -58,33 +58,3 @@ h3.title:after {
 }
 
 
- */
- 
-  .vietstore-product {
-	height: 220px !important;
-	max-height: 100%
-}
-.detail-img {
-	max-width: 100%;
-	max-height: 450px
-}
-.detail-info li {
-	font-variant: small-caps;
-	font-size: larger;
-	line-height: 30px
-}
-.thumb-img {
-	width: 60px;
-	height: 60px;
-	border-radius: 5px;
-	margin: 3px;
-	padding: 3px;
-	box-shadow: 0px 0px 2px blue;
-}
-.thumb-img:hover {
-	box-shadow: 0px 0px 8px red;
-}
-
-
- 
- 

@@ -23,21 +23,24 @@
 
 <link href="/static/jqueryui/jquery-ui.min.css" rel="stylesheet" />
 <script src="/static/jqueryui/jquery-ui.min.js"></script>
-
+<script src="/ckeditor/ckeditor.js"></script>
 
 
 <link href="/static/css/styles.css" rel="stylesheet" />
-<script src="/static/js/vietstore.js"></script>
+<script src="/static/js/index.js"></script>
 
 
 
 
 
 
+<link rel="stylesheet" href="/static/css/dac_biet.css">
+<link rel="stylesheet" href="/static/css/tintuc_sk.css">
+<link rel="stylesheet" href="/static/js/scoll.js">
 
 
-<link href="/static/jqueryui/jquery-ui.min.css" rel="stylesheet" />
-<script src="/static/jqueryui/jquery-ui.min.js"></script>
+
+
 <script>
 	$(document).ready(function() {
 		$(".danh_muc").click(function() {
@@ -46,5 +49,3 @@
 
 	});
 </script>
- 
-

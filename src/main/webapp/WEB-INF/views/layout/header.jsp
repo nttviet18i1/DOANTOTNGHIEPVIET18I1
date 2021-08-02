@@ -63,7 +63,7 @@
 																</c:forEach>
 															</c:when>
 															<c:otherwise>
-																<!-- <div style="padding: 10px 10px 10px 30px;">Không có sản phẩm nào trong giỏ hàng!</div> -->
+																<div style="padding: 10px 10px 10px 30px;">Không có sản phẩm nào trong giỏ hàng!</div> 
 															</c:otherwise>
 														</c:choose>
 													

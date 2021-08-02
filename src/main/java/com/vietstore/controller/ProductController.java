@@ -76,6 +76,18 @@ public class ProductController {
 
 		return "product/detail";
 	}
+	
+	/*
+	 * @RequestMapping("/product/list-by-special/{id}") public String
+	 * listBySpecial(Model model, @PathVariable("id") Integer id) { List<Product>
+	 * list = pdao.findBySpecial(id); model.addAttribute("list", list); return
+	 * "product/list_special_full"; }
+	 * 
+	 * @RequestMapping("/product/list-by-new/{id}") public String listByNews(Model
+	 * model, @PathVariable("id") Integer id) { List<Product> list =
+	 * pdao.findBySpecial(id); model.addAttribute("list1", list); return
+	 * "product/list-by-new_full"; }
+	 */
 
 	@RequestMapping("/product/list-by-special/{id}")
 	public String listBySpencial(Model model, @PathVariable("id") Integer id) {
@@ -130,5 +142,6 @@ public class ProductController {
 				}
 		return "product/favo";
 	}
+	
 }
 
