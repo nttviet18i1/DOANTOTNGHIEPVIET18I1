@@ -8,38 +8,36 @@
 
 
 
-
-		<div style="padding: 10px 0px 15px; margin-top: -10px; position: relative;margin-left: 300px">
-
-
-              <div id="demo" class="carousel slide" data-ride="carousel">
-
-                <!-- Indicators -->
-                <ul class="carousel-indicators">
-                  <li data-target="#demo" data-slide-to="0" class="active"></li>
-                  <li data-target="#demo" data-slide-to="1"></li>
-                  <li data-target="#demo" data-slide-to="2"></li>
-                  <li data-target="#demo" data-slide-to="3"></li>
-                </ul>
-              
-				<div class="carousel-inner">
-					<div class="carousel-item active">
-						<img src="/static/images/slideshow/banner3.png"alt="Los Angeles" width="100%" height="342px">
-					</div>
-					<div class="carousel-item">
-						<img src="/static/images/slideshow/slide2.jpg" alt="Los Angeles" width="100%" height="342px">
-					</div>
-					<div class="carousel-item">
-						<img src="/static/images/slideshow/slide3.jpg" alt="Los Angeles" width="100%" height="342px">
-					</div>
-					<div class="carousel-item">
-						<img src="/static/images/slideshow/slide4.jpg" alt="Los Angeles" width="100%" height="342px">
-					</div>
-				</div>
-              </div>
-		</div>
-
-
+<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+  </ol>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img class="d-block w-100" src="/static/images/slide1.png" alt="Los Angelese" width="342px">
+    </div>
+    <div class="carousel-item">
+      <img class="d-block w-100" src="/static/images/slide2.png" alt="Los Angeles" width="342px">
+    </div>
+    <div class="carousel-item">
+      <img class="d-block w-100" src="/static/images/slide3.png" alt="Los Angeles" width="342px">
+    </div>
+    <div class="carousel-item">
+      <img class="d-block w-100" src="/static/images/slide4.png" alt="Los Angeles" width="342px">
+    </div>
+    
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
 
 
 	<!-- slide -->
@@ -58,7 +56,7 @@
 
 		<div style="padding: 20px 0px 0px 10px; margin-top: -10px; height: 420px">
 
-			<jsp:include page="../product/list_special.jsp" />
+				<jsp:include page="../product/list_special.jsp" />
 		</div>
 	</div>
 

@@ -112,7 +112,7 @@ $(document).ready(function() {
 			success: function(response){
 				if(response){
 					$("[data-dismiss]").click();
-					alert("Da gui thanh cong")
+					alert("cảm ơn quý khách đã phản hồi")
 				}
 				else{
 					alert("Loi gui mail")

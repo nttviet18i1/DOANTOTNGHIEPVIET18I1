@@ -6,6 +6,10 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
+//import javax.validation.constraints.Email;
+//import javax.validation.constraints.NotEmpty;
+
+//import org.hibernate.validator.constraints.Length;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
@@ -13,50 +17,29 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 
 
 
-@Entity @Table(name="Users")
+@Entity
+@Table(name = "Users")
 public class User {
 	@Id
-	/* @NotEmpty */
+//	@NotEmpty
 	String id;
-	/* @NotEmpty */
-	/* @Length(min=6) */
+	//@NotEmpty
+	//@Length(min=6)
 	String password;
-	/* @NotEmpty */
+	//@NotEmpty
 	String fullname;
-	/* @NotEmpty */
+//@NotEmpty
 	String telephone;
-	/*
-	 * @NotEmpty
-	 * 
-	 * @Email
-	 */
+	//@NotEmpty
+	//@Email
 	String email;
 	String photo;
 	Boolean activated;
 	Boolean admin;
-	
+
 	@JsonIgnore
 	@OneToMany(mappedBy = "user")
 	List<Order> orders;
-	
-
-	public User() {
-		
-	}
-
-	public User(String id, String password, String fullname, String telephone, String email, String photo,
-			Boolean activated, Boolean admin, List<Order> orders) {
-		super();
-		this.id = id;
-		this.password = password;
-		this.fullname = fullname;
-		this.telephone = telephone;
-		this.email = email;
-		this.photo = photo;
-		this.activated = activated;
-		this.admin = admin;
-		this.orders = orders;
-	}
 
 	public String getId() {
 		return id;
@@ -81,7 +64,7 @@ public class User {
 	public void setFullname(String fullname) {
 		this.fullname = fullname;
 	}
-
+	
 	public String getTelephone() {
 		return telephone;
 	}
@@ -89,7 +72,7 @@ public class User {
 	public void setTelephone(String telephone) {
 		this.telephone = telephone;
 	}
-
+	
 	public String getEmail() {
 		return email;
 	}
@@ -130,6 +113,6 @@ public class User {
 		this.orders = orders;
 	}
 	
-
+	
 
 }

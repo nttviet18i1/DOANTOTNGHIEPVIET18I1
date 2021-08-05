@@ -1,8 +1,10 @@
 package com.vietstore.entity;
 
+
 import java.util.List;
 
 import javax.persistence.Entity;
+
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -17,14 +19,10 @@ public class Category {
 	Integer id;
 	String name;
 	String nameVN;
-
-	@OneToMany(mappedBy = "category")
+	
+	@OneToMany(mappedBy="category")
 	List<Product> products;
-	
-	
-public Category() {
-	
-}
+
 	public Integer getId() {
 		return id;
 	}
@@ -56,6 +54,6 @@ public Category() {
 	public void setProducts(List<Product> products) {
 		this.products = products;
 	}
-
+	
 	
 }

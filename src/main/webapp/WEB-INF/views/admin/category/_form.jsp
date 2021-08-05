@@ -8,6 +8,10 @@
 				<div class="row">
 					<div class="col-lg-6">
 						<form:form action="${base}/index" modelAttribute="entity" role="form">
+						<div class=form-group >
+						<form:input readonly="${!empty entity.id}"  path="id" class="form-control"   required="required"/>
+						
+						</div>
 							<div class="form-group">
 								<label>Tên loại:</label>
 								<form:input path="name" class="form-control" required="required" pattern=".{4,}" title="Tên loại phải từ 4 ký tự trở lên"/>

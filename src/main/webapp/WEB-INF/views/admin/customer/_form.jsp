@@ -8,7 +8,7 @@
 				<div class="form-group col-sm-6">
 					<label>Tên đăng nhập:</label>
 					<form:input path="id" class="form-control"
-						readonly="${!empty entity.id}" required="required" pattern=".{4,}"
+						readonly="${!empty entity.id}"  required="required" pattern=".{4,}"
 						title="Tên đăng nhập phải từ 4 ký tự trở lên" />
 				</div>
 				<div class="form-group col-sm-6">

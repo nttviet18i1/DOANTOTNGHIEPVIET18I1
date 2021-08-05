@@ -7,7 +7,7 @@
 	<div class="col-sm-4">
 		<div class="thumbnail">
 			<a href="/product/detail/${p.id}"> 
-			<img  class="vietstore-product" src="/static/images/products/${p.image}"></a>
+			<img  class="vietstore-prod" src="/static/images/products/${p.image}"></a>
 
 			<div class="caption">
 			<div class="pull-center text-center"  data-id= "${p.id}">

@@ -1,6 +1,7 @@
 package com.vietstore.admin.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
@@ -11,7 +12,7 @@ import com.vietstore.entity.Order;
 import com.vietstore.entity.Product;
 import com.vietstore.entity.User;
 
-
+@Controller
 public class AdminHomeController {
 
 		@Autowired
